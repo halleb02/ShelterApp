@@ -18,6 +18,8 @@ struct SponsorAnimalSheet: View {
     @State private var expirationDate: String = ""
     @State private var cvv: String = ""
 
+    private let db = Firestore.firestore()
+
     var body: some View {
         VStack {
             if showThankYouMessage {
@@ -57,8 +59,8 @@ struct SponsorAnimalSheet: View {
                     }
                     
                     Button("Donate") {
-                    
-                        showThankYouMessage = true
+                        // Send the donation details to Firestore
+                        sendDonationToFirestore()
                     }
                     .padding()
                     .background(Color.green)
@@ -68,5 +70,32 @@ struct SponsorAnimalSheet: View {
             }
         }
         .padding()
+    }
+
+    private func sendDonationToFirestore() {
+        guard let donationAmountValue = Double(donationAmount),
+              !creditCardNumber.isEmpty,
+              !expirationDate.isEmpty,
+              !cvv.isEmpty else {
+            return
+        }
+
+        let donationData: [String: Any] = [
+            "animalName": animal.name,
+            "donationAmount": donationAmountValue,
+            "creditCardNumber": creditCardNumber,
+            "expirationDate": expirationDate,
+            "cvv": cvv,
+            "timestamp": FieldValue.serverTimestamp()
+        ]
+
+        db.collection("donations").addDocument(data: donationData) { error in
+            if let error = error {
+                print("Error adding donation: \(error.localizedDescription)")
+            } else {
+                print("Donation added successfully!")
+                showThankYouMessage = true
+            }
+        }
     }
 }
