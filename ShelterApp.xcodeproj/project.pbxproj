@@ -6,6 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		762BF7682CFA33E90078515A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 762BF7672CFA33E90078515A /* FirebaseAnalytics */; };
+		762BF76A2CFA33E90078515A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 762BF7692CFA33E90078515A /* FirebaseAuth */; };
+		762BF76C2CFA33E90078515A /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 762BF76B2CFA33E90078515A /* FirebaseAuthCombine-Community */; };
+		762BF76E2CFA33E90078515A /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 762BF76D2CFA33E90078515A /* FirebaseCore */; };
+		762BF7702CFA33E90078515A /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 762BF76F2CFA33E90078515A /* FirebaseDatabase */; };
+		762BF7722CFA33E90078515A /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = 762BF7712CFA33E90078515A /* FirebaseDynamicLinks */; };
+		762BF7742CFA33E90078515A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 762BF7732CFA33E90078515A /* FirebaseFirestore */; };
+		762BF7762CFA33E90078515A /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 762BF7752CFA33E90078515A /* FirebaseFirestoreCombine-Community */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		762BF7532CFA31620078515A /* ShelterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShelterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +34,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				762BF7702CFA33E90078515A /* FirebaseDatabase in Frameworks */,
+				762BF7762CFA33E90078515A /* FirebaseFirestoreCombine-Community in Frameworks */,
+				762BF7682CFA33E90078515A /* FirebaseAnalytics in Frameworks */,
+				762BF76C2CFA33E90078515A /* FirebaseAuthCombine-Community in Frameworks */,
+				762BF76E2CFA33E90078515A /* FirebaseCore in Frameworks */,
+				762BF76A2CFA33E90078515A /* FirebaseAuth in Frameworks */,
+				762BF7722CFA33E90078515A /* FirebaseDynamicLinks in Frameworks */,
+				762BF7742CFA33E90078515A /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +84,14 @@
 			);
 			name = ShelterApp;
 			packageProductDependencies = (
+				762BF7672CFA33E90078515A /* FirebaseAnalytics */,
+				762BF7692CFA33E90078515A /* FirebaseAuth */,
+				762BF76B2CFA33E90078515A /* FirebaseAuthCombine-Community */,
+				762BF76D2CFA33E90078515A /* FirebaseCore */,
+				762BF76F2CFA33E90078515A /* FirebaseDatabase */,
+				762BF7712CFA33E90078515A /* FirebaseDynamicLinks */,
+				762BF7732CFA33E90078515A /* FirebaseFirestore */,
+				762BF7752CFA33E90078515A /* FirebaseFirestoreCombine-Community */,
 			);
 			productName = ShelterApp;
 			productReference = 762BF7532CFA31620078515A /* ShelterApp.app */;
@@ -94,6 +121,9 @@
 			);
 			mainGroup = 762BF74A2CFA31620078515A;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				762BF7662CFA33E90078515A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 762BF7542CFA31620078515A /* Products */;
 			projectDirPath = "";
@@ -322,6 +352,60 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		762BF7662CFA33E90078515A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		762BF7672CFA33E90078515A /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 762BF7662CFA33E90078515A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		762BF7692CFA33E90078515A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 762BF7662CFA33E90078515A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		762BF76B2CFA33E90078515A /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 762BF7662CFA33E90078515A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		762BF76D2CFA33E90078515A /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 762BF7662CFA33E90078515A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		762BF76F2CFA33E90078515A /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 762BF7662CFA33E90078515A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		762BF7712CFA33E90078515A /* FirebaseDynamicLinks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 762BF7662CFA33E90078515A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDynamicLinks;
+		};
+		762BF7732CFA33E90078515A /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 762BF7662CFA33E90078515A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		762BF7752CFA33E90078515A /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 762BF7662CFA33E90078515A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 762BF74B2CFA31620078515A /* Project object */;
 }
